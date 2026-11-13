@@ -14,7 +14,7 @@ export default function handler(req, res) {
     // [내일일 때] 카페24에 올린 진짜 배너 이미지로 연결
     res.redirect(302, "https://doorins.cafe24.com/Event/real_banner.jpg");
   } else {
-    // [내일이 아닐 때] 엑스박스가 안 뜨는 1x1 투명 GIF 반환
+    // [내일이 아닐 때] 높이 1px짜리 투명 GIF 반환 (공간 최소화)
     const transparentGif = Buffer.from(
       "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "base64"
